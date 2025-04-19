@@ -1,0 +1,44 @@
+<?php
+
+namespace App\Services;
+
+use Illuminate\Support\Collection;
+
+use {{ modelNamespace }};
+
+class {{ model }}Service
+{
+    protected $model;
+
+    public function __construct({{ model }} $model)
+    {
+        $this->model = $model;
+    }
+
+        public function all(): Collection
+    {
+        return $this->model->all();
+    }
+
+    public function find($id): {{ model }}
+    {
+        return $this->model->findOrFail($id);
+    }
+
+    public function create(array $data): {{ model }}
+    {
+        return $this->model->create($data);
+    }
+
+    public function update($id, array $data): {{ model }}
+    {
+        $model = $this->model->findOrFail($id);
+        $model->update($data);
+        return $model;
+    }
+
+    public function delete($id): bool
+    {
+        return $this->model->destroy($id);
+    }
+}

@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Repositories\Interface;
+
+use Illuminate\Support\Collection;
+
+use {{ modelNamespace }};
+
+interface {{ model }}RepositoryInterface
+{
+    public function all(): Collection;
+
+    public function find($id): {{ model }};
+
+    public function create(array $data): {{ model }};
+
+    public function update($id, array $data): {{ model }};
+
+    public function delete($id): bool;
+}

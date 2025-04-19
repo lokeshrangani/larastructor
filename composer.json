@@ -1,0 +1,29 @@
+{
+  "name": "laralearn/larastructor",
+  "description": "An artisan companion for Laravel learners to create Models, Services, and Repositories.",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "LaraStructor\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "git@lokeshrangani"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "illuminate/support": "^9.0|^10.0|^11.0"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "LaraStructor\\LaraStructorServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
