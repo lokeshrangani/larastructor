@@ -1,18 +1,18 @@
-# 📦 LaraStructor - Laravel Structure Generator 🛠️
+# LaraStructor - Laravel Structure Generator
 
 A set of Artisan commands to automatically generate **Repository**, **Interface**, and **Service** classes in your Laravel application with clean structure and naming conventions. Inspired by clean architecture — made simple and fun!
 
 ---
 
-## 🛠 Requirements
+## Requirements
 
 - Laravel 8 or above
 - PHP 8.0+
-- Your model classes should exist before running repository generation
+- Your model classes should exist before running the repository generation
 
 ---
 
-## 🗂️ Generated Folder Structure Example
+## Generated Folder Structure Example
 
 ```text
 app/
@@ -26,15 +26,15 @@ app/
 │   └── ProductService.php
 ```
 
-## 🚀 Installation
+## Installation
 
 ```
 composer require laralearn/larastructor
 ```
 
-## 🛠 Available Commands
+## Available Commands
 
-1. ✅ Make a Model
+## 1. Make a Model
 
 ```
 php artisan larastruct:make-model
@@ -57,7 +57,7 @@ What it does:
     Creates a model file inside app/Models
 ```
 
-## 2. ✅ Generate Repository & Interface
+## 2. Generate Repository & Interface
 
 ```
 php artisan larastruct:make-repository {model} --model-path=Models
@@ -66,27 +66,27 @@ php artisan larastruct:make-repository {model} --model-path=Models
 Options:
 
 ```
-    model – The name of your model (e.g. Product)
-    --model-path – Relative path to your model directory (default: Models)
+model – The name of your model (e.g. Product)
+--model-path – Relative path to your model directory (default: Models)
 ```
 
 ### What it does:
 
 ```
-    Checks if the given model exists in the specified path
-    Creates:
-        ProductRepository.php in app/Repositories
-        ProductRepositoryInterface.php in app/Repositories/Interfaces
+Checks if the given model exists in the specified path
+Creates:
+    ProductRepository.php in app/Repositories
+    ProductRepositoryInterface.php in app/Repositories/Interfaces
     Adds boilerplate CRUD methods
 ```
 
-## 3. ✅ Generate Service Class for Repository
+## 3. Generate Service Class for Repository
 
 Options:
 
 ```
-    repository – The name of your repository/model (e.g. Product)
-    --repository-path – Relative path to your repositories (default: Repositories)
+repository – The name of your repository/model (e.g. Product)
+--repository-path – Relative path to your repositories (default: Repositories)
 ```
 
 ### What it does:
@@ -98,7 +98,7 @@ Options:
     Adds methods: getAll, getById, create, update, delete
 ```
 
-## 4. ✅ Generate Service Class for Model
+## 4. Generate Service Class for Model
 
 ```
 php artisan larastruct:make-service {model} --model-path=Models
@@ -107,20 +107,20 @@ php artisan larastruct:make-service {model} --model-path=Models
 Options:
 
 ```
-    model – The name of your model (e.g. Product)
-    --model-path – Relative path to your model directory (default: Models)
+model – The name of your model (e.g. Product)
+--model-path – Relative path to your model directory (default: Models)
 ```
 
 What it does:
 
 ```
-    Checks if the model exists
-    Creates a service class in app/Services
-    Injects the model in the constructor
-    Adds basic methods like getAll, getById, create, update, delete
+Checks if the model exists
+Creates a service class in app/Services
+Injects the model in the constructor
+Adds basic methods like getAll, getById, create, update, delete
 ```
 
-## 🧪 Example Output
+## Example Output
 
 ### ProductRepository
 
@@ -136,12 +136,12 @@ class ProductRepository
 
 ```
 
-## ✨ Contribution
+## Let's improve it together 
 
-Want to improve this tool or add new features?
-Feel free to fork and submit a PR. Let’s make LaraStructor even cooler together 🚀
+Would you like to improve this tool or add new features?
+Feel free to fork and submit a PR. Let’s make LaraStructor even cooler together
 
 ## Author(s)
 
 - [@lokeshrangani](https://www.github.com/lokeshrangani)
-- waiting for second name
+- waiting for yourname
